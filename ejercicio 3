@@ -1,0 +1,57 @@
+function Vectores (){
+    var  TamañoMaximo,Vector1,Vector2,Resultado,Numero,vector,Indice1,Indice2;
+
+    TamañoMaximo = 5;
+    Vector1 = [];
+    Vector2 = [];
+    Resultado = [];
+    
+    function Vectores (vector,nombre){
+
+        window.alert("ingrese  numeros  enteros  en  orden  ascendente");
+
+        for(let i = 0; i < TamañoMaximo; i++){
+            Numero = parseInt(prompt('escriba el  vector:  '));
+
+            if (isNaN(Numero)){
+                window.alert("Entrada invalida.Ingrese un numero  entero.");
+                i--;
+            }else if (i > 0 && Numero <= vector[i - 1]){
+                window.alert("Entrada invalida.El numero  debe  ser  mayor  que el  anterior. ");
+                i--;
+            }else{
+                vector.push(Numero);
+            }
+
+        }
+    }
+
+    Vectores(Vector1, "primer");
+    Vectores(Vector2, "segundo");
+
+    Indice1 = 0;
+    Indice2 = 0;
+    
+    while (Indice1 < Vector1.length && Indice2 < Vector2.length){
+        if(Vector1[Indice1] < Vector2[Indice2]){
+            Resultado.push(Vector1[Indice1]);
+            Indice1++;
+        } else if (Vector1[Indice1] > Vector2[Indice2]){
+            Resultado.push(Vector2[Indice2]);
+            Indice2++;
+        }
+    }
+while (Indice1 < Vector1.length){
+    Resultado.push(Vector1[Indice1]);
+    Indice1++;
+}
+
+ 
+while (Indice2 < Vector2.length){
+    Resultado.push(Vector2[Indice2]);
+    Indice2++;
+}
+
+window.alert("la  lista  ordenado  de  los  vectores  es: ");
+window.alert(Resultado);
+}
