@@ -1,0 +1,44 @@
+function Triangulo (){
+    var ladoa,ladob,alturaT,baseT,areaT,perimetroT;
+    
+    baseT = prompt("Ingresar la  base del Triangulo");
+    alturaT = prompt("Ingresar la  altura del  Triangulo");
+    ladoa = prompt("Ingresar  el  lado A del  Triangulo");
+    ladob =prompt("Ingresar el  lado B del  Triangulo");
+
+    areaT=(baseT*alturaT/2);
+    perimetroT=(baseT+ladoa+ladob);
+    window.alert ("El area  del  triangulo  es: " + areaT + "cm3" + "El area de triangulo es :" + perimetroT + "cm.");
+
+}
+function Rectangulo (){
+    var ladoa,ladob,areaR,perimetroR;
+    
+    ladoa = prompt("Ingresar  el  lado A del  Rectangulo");
+    ladob =prompt("Ingresar el  lado B del  Rectangulo");
+
+    areaR=(ladoa*ladob);
+    perimetroR=(2*(ladoa+ladob));
+    window.alert ("El area  del  Rectangulo  es: " + areaR + "cm" + "El area de Rectangulo es :" + perimetroR + "cm.");
+
+}
+function Cuadrado (){
+    var ladoa,areaC,perimetroC;
+    
+    ladoa = prompt("Ingresar  el  lado A del  Cuadrado");
+    
+    areaC=(ladoa*ladoa);
+    perimetroC=(4*ladoa);
+    window.alert ("El area  del  Cuadrado  es: " + areaC + "cm2" + "El area de Cuadrado es :" + perimetroC + "cm.");
+
+}
+function Circulo (){
+    var valorR,areaCir,perimetroCir;
+    
+    valorR = prompt("Ingresar valor de R del  Circulo");
+   
+    areaCir=(3,14*(valorR*valorR));
+    perimetroCir=(2*3,14*valorR);
+    window.alert ("El area  del  Circulo  es: " + areaCir + "cm3" + "El area de triangulo es :" + perimetroCir + "cm.");
+
+}
