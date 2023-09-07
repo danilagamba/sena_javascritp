@@ -1,0 +1,51 @@
+function Edad() {
+  
+    var edades, menoresEdad, mayoresEdad, adultosMayores, edadMasAlta, edadMasBaja, sumaEdades, Cantidaddepersonas, edad, promedioEdades;
+
+    Cantidaddepersonas = 10;
+    edades = [];
+    menoresEdad = 0;
+    mayoresEdad = 0;
+    adultosMayores = 0;
+    edadMasBaja = 0;
+    edadMasAlta = 0;
+    sumaEdades = 0;
+
+    window.alert("Ingrese las edades de las 10 personas:");
+
+    for (let i = 0; i < Cantidaddepersonas; i++) {
+        let Edad = parseInt(prompt('Persona: '));
+
+        while (isNaN(Edad) || Edad < 1 || Edad > 120) {
+            window.alert("Edad no válida. Debe estar en el rango de 1 a 120 años.");
+            Edad = parseInt(prompt('Persona ${i + 1}: '));
+        }
+
+        edades.push(Edad);
+        sumaEdades += Edad;
+
+        if (Edad < 18) {
+            menoresEdad++;
+        } else if (Edad >= 18 && Edad < 60) {
+            mayoresEdad++;
+        } else {
+            adultosMayores++;
+        }
+
+        if (Edad <= 18 && edadMasBaja > 0) {
+            edadMasBaja = Edad;
+        }
+        if (Edad > edadMasAlta) {
+            edadMasAlta = Edad;
+        }
+    }
+
+    promedioEdades = sumaEdades / Cantidaddepersonas;
+
+    window.alert('Cantidad de personas menores de edad: ' + menoresEdad);
+    window.alert('Cantidad de personas mayores de edad: ' + mayoresEdad);
+    window.alert('Cantidad de adultos mayores (60 años o más): ' + adultosMayores);
+    window.alert('Edad más baja: ' + edadMasBaja);
+    window.alert('Edad más alta: ' + edadMasAlta);
+    window.alert('Promedio de edades: ' + promedioEdades);
+}
